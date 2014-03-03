@@ -39,3 +39,6 @@ nmap <leader>ew :e <C-R>=expand('%:h').'/'<cr>
 " jshint "
 let jshint2_read = 1
 let jshint2_save = 1
+
+"line numbers"
+set nu
