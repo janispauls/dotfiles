@@ -14,6 +14,7 @@ filetype plugin indent on
 
 set incsearch
 set ignorecase
+set hlsearch
 
 set shiftwidth=2
 set tabstop=2
