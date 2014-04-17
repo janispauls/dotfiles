@@ -32,6 +32,7 @@ set backupdir=~/.backup
 set backspace=indent,eol,start
 
 autocmd FileType coffeescript setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 set noerrorbells
 
@@ -43,3 +44,13 @@ let jshint2_save = 1
 
 "line numbers"
 set nu
+
+autocmd BufWritePre,BufRead *.coffee call CoffeeLintAndShow()
+
+function CoffeeLintAndShow()
+  CoffeeLint -f coffeelint.json
+  cwindow
+endfunction
+
+"disabling audio bell"
+set vb
